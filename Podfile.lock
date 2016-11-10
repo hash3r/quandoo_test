@@ -1,0 +1,31 @@
+PODS:
+  - Alamofire (4.0.1)
+  - AlamofireObjectMapper (4.0.0):
+    - Alamofire (~> 4.0)
+    - ObjectMapper (~> 2.0)
+  - HTTPStatusCodes (3.1.0)
+  - ObjectMapper (2.2.1)
+  - PromiseKit/CorePromise (4.0.4)
+  - PromiseKit/UIKit (4.0.4):
+    - PromiseKit/CorePromise
+  - SwiftyJSON (3.1.1)
+
+DEPENDENCIES:
+  - Alamofire
+  - AlamofireObjectMapper
+  - HTTPStatusCodes
+  - PromiseKit/CorePromise
+  - PromiseKit/UIKit
+  - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 7682d43245de14874acd142ec137b144aa1dd335
+  AlamofireObjectMapper: 9faa3ce5a240efda1b209009a2d6e1e949227abc
+  HTTPStatusCodes: e0747e2497f1c887944a306b7d7122cb2a01f553
+  ObjectMapper: 41e43e1a89f8060ef5ea5d04ba852e269a621d68
+  PromiseKit: 8e8ee39d33ff199d92a1a883b5396f6285be6c91
+  SwiftyJSON: f0be2e604f83e8405a624e9f891898bf6ed4e019
+
+PODFILE CHECKSUM: 496de719a3eb044e3749fbeba34d5aad33edc78f
+
+COCOAPODS: 1.0.1
