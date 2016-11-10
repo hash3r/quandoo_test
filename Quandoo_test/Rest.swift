@@ -20,7 +20,7 @@ typealias Success = (JSON) -> ()
 typealias Failure = (NSError?) -> ()
 public typealias ParametersType = AnyObject // [String: AnyObject]
 
-/// REST singleton class for communicating with the services
+/// REST singleton class for communicating with services
 public class Rest {
 
     /// A shared instance of `RestAPI`, used by top-level request methods
@@ -37,12 +37,12 @@ public class Rest {
         return Promise { fulfill, reject in
             let router = Router(target)
             let request = manager.request(router)
-            debugPrint(request)
+//            debugPrint(request)
             request.responseJSON { response in
-                if let data = response.data {
-                    let responseData = JSON(data: data)
-                    debugPrint(responseData)
-                }
+//                if let data = response.data {
+//                    let responseData = JSON(data: data)
+//                    debugPrint(responseData)
+//                }
                 if let value = response.result.value, response.isSuccess() {
                     fulfill(JSON(value))
                 } else {
@@ -73,12 +73,12 @@ public class Rest {
         return Promise { fulfill, reject in
             let router = Router(target)
             let request = manager.request(router)
-            debugPrint(request)
+//            debugPrint(request)
             request.responseObject { (response: DataResponse<T>) -> Void in
-                if let data = response.data {
-                    let responseData = JSON(data: data)
-                    debugPrint(responseData)
-                }
+//                if let data = response.data {
+//                    let responseData = JSON(data: data)
+//                    debugPrint(responseData)
+//                }
                 if let value = response.result.value, response.isSuccess() {
                     fulfill(value)
                 } else {
@@ -101,12 +101,12 @@ public class Rest {
         return Promise { fulfill, reject in
             let router = Router(target)
             let request = manager.request(router)
-            debugPrint(request)
+//            debugPrint(request)
             request.responseArray { (response: DataResponse<[T]>) -> Void in
-                if let data = response.data {
-                    let responseData = JSON(data: data)
-                    debugPrint(responseData)
-                }
+//                if let data = response.data {
+//                    let responseData = JSON(data: data)
+//                    debugPrint(responseData)
+//                }
                 if let value = response.result.value, response.isSuccess() {
                     fulfill(value)
                 } else {
