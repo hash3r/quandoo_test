@@ -29,9 +29,9 @@ class UserViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     func requestUsers() {
         let userTarget = Target(.User, CRUDTask.ReadAll)
-        _ = RestInstance.arrayMappableRequest(target: userTarget).then(execute: { (users: [User]) -> () in
-            self.users = users
-            self.tableView.reloadData()
+        _ = RestInstance.arrayMappableRequest(target: userTarget).then(execute: { [weak self] (users: [User]) -> () in
+            self?.users = users
+            self?.tableView.reloadData()
         })
     }
     

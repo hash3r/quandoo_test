@@ -31,9 +31,9 @@ class PostViewController: UIViewController, UITableViewDelegate, UITableViewData
     func requestPosts(for userId: Int?) {
         guard let userId = userId else { return }
         let userTarget = Target(.Post, PostTask.UsersPosts("\(userId)"))
-        _ = RestInstance.arrayMappableRequest(target: userTarget).then(execute: { (posts: [Post]) -> () in
-            self.posts = posts
-            self.tableView.reloadData()
+        _ = RestInstance.arrayMappableRequest(target: userTarget).then(execute: { [weak self] (posts: [Post]) -> () in
+            self?.posts = posts
+            self?.tableView.reloadData()
         })
     }
     
